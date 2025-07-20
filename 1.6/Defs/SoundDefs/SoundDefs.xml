@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Other -->
+  <SoundDef>
+    <defName>Frog_Angry</defName>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>FrogAngry</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>20.058827</min>
+          <max>40.058827</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.9311765</min>
+          <max>1</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+ 
+  <SoundDef>
+    <defName>Frog_Angry_Deep</defName>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>FrogAngry</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>20.058827</min>
+          <max>40.058827</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.5</min>
+          <max>0.8</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Peeper_Peep</defName>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>PeeperPeep</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>10.058827</min>
+          <max>30.058827</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.9311765</min>
+          <max>1</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Lick</defName>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>LickSound</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>20.058827</min>
+          <max>40.058827</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.9311765</min>
+          <max>1</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>Fly_Spit</defName>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>FlySpit</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>40.058827</min>
+          <max>60.058827</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.7</min>
+          <max>0.8</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <SoundDef>
+    <defName>FrogPop</defName>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>FrogPop</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>100</min>
+          <max>100</max>
+        </volumeRange>
+        <pitchRange>
+          <min>0.9311765</min>
+          <max>1</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+</Defs>
+
