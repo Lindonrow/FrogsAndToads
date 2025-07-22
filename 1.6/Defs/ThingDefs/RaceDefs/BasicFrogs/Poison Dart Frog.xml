@@ -2,34 +2,26 @@
 <Defs>
 
   <ThingDef ParentName="AnimalThingBase">
-    <defName>Toad</defName>
-    <label>toad</label>
-    <description>A toad with long legs which are a delicacy. Rip them off and they'll grow back.</description>
+    <defName>PoisonDartFrog</defName>
+    <label>poison dart frog</label>
+    <description>Probably shouldn't touch this.</description>
     <statBases>
       <MoveSpeed>4.0</MoveSpeed>
-      <MarketValue>100</MarketValue>
+      <MarketValue>200</MarketValue>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
-      <Wildness>0.3</Wildness>
-      <ToxicResistance>0</ToxicResistance>
+      <ComfyTemperatureMax>20</ComfyTemperatureMax>
+      <Wildness>0.6</Wildness>
+      <ToxicResistance>0.5</ToxicResistance>
     </statBases>
     <uiIconScale>1.25</uiIconScale>
-	<comps>
-		<li Class="VEF.AnimalBehaviours.CompProperties_AnimalProduct">
-			<resourceDef>ToadLegs</resourceDef>
-			<gatheringIntervalDays>1</gatheringIntervalDays>
-			<resourceAmount>1</resourceAmount>
-			<customResourceString>legGrowth</customResourceString>
-		</li>
-	</comps>
     <tools>
       <li>
         <capacities>
-          <li>Bite</li>
+          <li>ToxicBite</li>
         </capacities>
-        <power>4</power>
-        <cooldownTime>2</cooldownTime>
+        <power>3</power>
+        <cooldownTime>1</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.7</chanceFactor>
       </li>
       <li>
         <label>head</label>
@@ -40,7 +32,7 @@
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
+        <chanceFactor>0.15</chanceFactor>
       </li>
     </tools>
     <race>
@@ -48,27 +40,23 @@
 			<BorealForest>0.01</BorealForest>
 			<IceSheet>0.01</IceSheet>
 			<Tundra>0.01</Tundra>
-			<ColdBog>0.1</ColdBog>
+			<ColdBog>0.05</ColdBog>
 			<SeaIce>0.01</SeaIce>
-			<TemperateSwamp>0.2</TemperateSwamp>
-			<TropicalSwamp>0.2</TropicalSwamp>
-			<TemperateForest>0.06</TemperateForest>
-			<TropicalRainforest>0.08</TropicalRainforest>
-			<AridShrubland>0.01</AridShrubland>
-			<Desert>0.01</Desert>
-			<ExtremeDesert>0.01</ExtremeDesert>
+			<TemperateSwamp>0.1</TemperateSwamp>
+			<TropicalSwamp>0.15</TropicalSwamp>
+			<TemperateForest>0.04</TemperateForest>
+			<TropicalRainforest>0.15</TropicalRainforest>
 	  </wildBiomes>
       <body>QuadrupedAnimalWithPaws</body>
       <nameGenerator>FrogNamerMale</nameGenerator>
       <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
-      <baseBodySize>0.15</baseBodySize>
-      <baseHealthScale>0.25</baseHealthScale>
+      <baseBodySize>0.12</baseBodySize>
+      <baseHealthScale>0.2</baseHealthScale>
       <baseHungerRate>0.1</baseHungerRate>
       <foodType>OmnivoreRoughAnimal</foodType>
       <leatherDef>Leather_Frog</leatherDef>
       <trainability>Intermediate</trainability>
-      <meatLabel>frog meat</meatLabel>
-      <petness>0.2</petness>
+      <petness>0.1</petness>
       <waterSeeker>true</waterSeeker>
       <waterCellCost>1</waterCellCost>	 
       <gestationPeriodDays>5</gestationPeriodDays>
@@ -99,36 +87,18 @@
     <tradeTags>
       <li>AnimalUncommon</li>
     </tradeTags>
-<!-- 	<modExtensions>
-		<li Class="AnimalBehaviours.AnimalStatExtension">
-			<statToAdd>
-				<li>ST_FrogRole</li>
-				<li>ST_FrogRarity</li>					
-			</statToAdd>
-			<statValues>
-				<li>ST_FrogFoodProduction</li>
-				<li>ST_FrogCommon</li>					
-			</statValues>
-			<statDescriptions>
-				<li>ST_FrogFoodProductionDesc</li>
-				<li>ST_FrogCommonDesc</li>
-			</statDescriptions>	
-			<showImageInInfoCard>true</showImageInInfoCard>
-			<ImageToShowInInfoCard>UI/Lore/ToadLore</ImageToShowInInfoCard>					
-		</li>
-	</modExtensions> -->
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>Toad</defName>
-    <label>toad</label>
-    <race>Toad</race>
-    <combatPower>25</combatPower>
+    <defName>PoisonDartFrog</defName>
+    <label>poison dart frog</label>
+    <race>PoisonDartFrog</race>
+    <combatPower>30</combatPower>
     <ecoSystemWeight>0.1</ecoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Toad/Toad</texPath>
+          <texPath>Things/Pawn/Animal/Frog_Types/PoisonDart_Frog/PoisonFrog</texPath>
           <drawSize>0.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -138,7 +108,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Toad/Toad</texPath>
+          <texPath>Things/Pawn/Animal/Frog_Types/PoisonDart_Frog/PoisonFrog</texPath>
           <drawSize>0.7</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -148,7 +118,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Toad/Toad</texPath>
+          <texPath>Things/Pawn/Animal/Frog_Types/PoisonDart_Frog/PoisonFrog</texPath>
           <drawSize>0.9</drawSize>
           <shadowData>
             <volume>(0.25, 0.3, 0.25)</volume>

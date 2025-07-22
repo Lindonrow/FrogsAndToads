@@ -2,32 +2,26 @@
 <Defs>
 
   <ThingDef ParentName="AnimalThingBase">
-    <defName>Toad</defName>
-    <label>toad</label>
-    <description>A toad with long legs which are a delicacy. Rip them off and they'll grow back.</description>
+    <defName>SpringPeeper</defName>
+    <label>spring peeper</label>
+    <description>A friendly little frog that peeps.</description>
     <statBases>
       <MoveSpeed>4.0</MoveSpeed>
       <MarketValue>100</MarketValue>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
-      <Wildness>0.3</Wildness>
+      <Wildness>0.2</Wildness>
       <ToxicResistance>0</ToxicResistance>
+	  <MeatAmount>15</MeatAmount>
+	  <LeatherAmount>7</LeatherAmount>
     </statBases>
     <uiIconScale>1.25</uiIconScale>
-	<comps>
-		<li Class="VEF.AnimalBehaviours.CompProperties_AnimalProduct">
-			<resourceDef>ToadLegs</resourceDef>
-			<gatheringIntervalDays>1</gatheringIntervalDays>
-			<resourceAmount>1</resourceAmount>
-			<customResourceString>legGrowth</customResourceString>
-		</li>
-	</comps>
     <tools>
       <li>
         <capacities>
           <li>Bite</li>
         </capacities>
-        <power>4</power>
-        <cooldownTime>2</cooldownTime>
+        <power>2</power>
+        <cooldownTime>2.6</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         <chanceFactor>0.7</chanceFactor>
       </li>
@@ -36,7 +30,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>2</power>
+        <power>1</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -48,32 +42,35 @@
 			<BorealForest>0.01</BorealForest>
 			<IceSheet>0.01</IceSheet>
 			<Tundra>0.01</Tundra>
-			<ColdBog>0.1</ColdBog>
+			<ColdBog>0.12</ColdBog>
 			<SeaIce>0.01</SeaIce>
-			<TemperateSwamp>0.2</TemperateSwamp>
-			<TropicalSwamp>0.2</TropicalSwamp>
-			<TemperateForest>0.06</TemperateForest>
-			<TropicalRainforest>0.08</TropicalRainforest>
+			<TemperateSwamp>0.25</TemperateSwamp>
+			<TropicalSwamp>0.21</TropicalSwamp>
+			<TemperateForest>0.09</TemperateForest>
+			<TropicalRainforest>0.07</TropicalRainforest>
 			<AridShrubland>0.01</AridShrubland>
 			<Desert>0.01</Desert>
 			<ExtremeDesert>0.01</ExtremeDesert>
-	  </wildBiomes>
+	  </wildBiomes>	
       <body>QuadrupedAnimalWithPaws</body>
       <nameGenerator>FrogNamerMale</nameGenerator>
       <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
-      <baseBodySize>0.15</baseBodySize>
-      <baseHealthScale>0.25</baseHealthScale>
-      <baseHungerRate>0.1</baseHungerRate>
+      <baseBodySize>0.10</baseBodySize>
+      <baseHealthScale>0.12</baseHealthScale>
+      <baseHungerRate>0.07</baseHungerRate>
       <foodType>OmnivoreRoughAnimal</foodType>
       <leatherDef>Leather_Frog</leatherDef>
       <trainability>Intermediate</trainability>
-      <meatLabel>frog meat</meatLabel>
-      <petness>0.2</petness>
+      <specialTrainables>
+        <li MayRequire="Ludeon.RimWorld.Odyssey">Comfort</li>
+      </specialTrainables>
+      <useMeatFrom>Toad</useMeatFrom>
+      <petness>0.8</petness>
       <waterSeeker>true</waterSeeker>
       <waterCellCost>1</waterCellCost>	 
       <gestationPeriodDays>5</gestationPeriodDays>
       <soundEating>Reptile_Eat</soundEating>
-      <lifeExpectancy>8</lifeExpectancy>
+      <lifeExpectancy>4</lifeExpectancy>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -88,7 +85,7 @@
           <minAge>0.25</minAge>
           <soundWounded>Pawn_Frog_Wounded</soundWounded>
           <soundDeath>Pawn_Frog_Death</soundDeath>
-          <soundCall>Pawn_Frog_Call</soundCall>
+          <soundCall>Peeper_Peep</soundCall>
           <soundAngry>Frog_Angry</soundAngry>
         </li>
       </lifeStageAges>
@@ -99,65 +96,65 @@
     <tradeTags>
       <li>AnimalUncommon</li>
     </tradeTags>
-<!-- 	<modExtensions>
-		<li Class="AnimalBehaviours.AnimalStatExtension">
-			<statToAdd>
-				<li>ST_FrogRole</li>
-				<li>ST_FrogRarity</li>					
-			</statToAdd>
-			<statValues>
-				<li>ST_FrogFoodProduction</li>
-				<li>ST_FrogCommon</li>					
-			</statValues>
-			<statDescriptions>
-				<li>ST_FrogFoodProductionDesc</li>
-				<li>ST_FrogCommonDesc</li>
-			</statDescriptions>	
-			<showImageInInfoCard>true</showImageInInfoCard>
-			<ImageToShowInInfoCard>UI/Lore/ToadLore</ImageToShowInInfoCard>					
-		</li>
-	</modExtensions> -->
+<!-- 		<modExtensions>
+			<li Class="AnimalBehaviours.AnimalStatExtension">
+				<statToAdd>
+					<li>ST_FrogRole</li>
+					<li>ST_FrogRarity</li>					
+				</statToAdd>
+				<statValues>
+					<li>ST_FrogFriendly</li>
+					<li>ST_FrogCommon</li>					
+				</statValues>
+				<statDescriptions>
+					<li>ST_FrogFriendlyDesc</li>
+					<li>ST_FrogCommonDesc</li>
+				</statDescriptions>	
+				<showImageInInfoCard>true</showImageInInfoCard>
+				<ImageToShowInInfoCard>UI/Lore/SpringPeeperLore</ImageToShowInInfoCard>					
+			</li>
+		</modExtensions> -->
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>Toad</defName>
-    <label>toad</label>
-    <race>Toad</race>
-    <combatPower>25</combatPower>
+    <defName>SpringPeeper</defName>
+    <label>spring peeper</label>
+    <race>SpringPeeper</race>
+    <combatPower>15</combatPower>
     <ecoSystemWeight>0.1</ecoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Toad/Toad</texPath>
-          <drawSize>0.5</drawSize>
+          <texPath>Things/Pawn/Animal/Frog_Types/Spring_Peeper/Peeper</texPath>
+          <drawSize>0.2</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Bullfrog/Dessicated_Bullfrog</texPath>
-          <drawSize>0.5</drawSize>
+          <drawSize>0.2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Toad/Toad</texPath>
-          <drawSize>0.7</drawSize>
+          <texPath>Things/Pawn/Animal/Frog_Types/Spring_Peeper/Peeper</texPath>
+          <drawSize>0.3</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Bullfrog/Dessicated_Bullfrog</texPath>
-          <drawSize>0.7</drawSize>
+          <drawSize>0.3</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Toad/Toad</texPath>
-          <drawSize>0.9</drawSize>
+          <texPath>Things/Pawn/Animal/Frog_Types/Spring_Peeper/Peeper</texPath>
+          <drawSize>0.4</drawSize>
           <shadowData>
-            <volume>(0.25, 0.3, 0.25)</volume>
+            <volume>(0.1, 0.1, 0.1)</volume>
             <offset>(0,0,0)</offset>
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Bullfrog/Dessicated_Bullfrog</texPath>
-          <drawSize>0.9</drawSize>
+          <drawSize>0.4</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>

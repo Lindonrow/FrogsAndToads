@@ -2,27 +2,6 @@
 <Defs>
   
   <ThingDef ParentName="LeatherBase">
-    <defName>Leather_Frog</defName>
-    <label>Frog Leather</label>
-	<description>Poor little guy...</description>
-    <graphicData>
-      <color>(0,100,0)</color>
-    </graphicData>
-	<statBases>
-      <MarketValue>1</MarketValue>
-	  <Flammability>0.5</Flammability>
-    </statBases>
-    <stuffProps>
-	  <stuffAdjective>frog</stuffAdjective>
-      <color>(0,100,0)</color>
-      <commonality>0.08</commonality>
-		<statOffsets>
-			<Flammability>-0.3</Flammability> <!-- "Super Mario" reference -->
-		</statOffsets>
-    </stuffProps>
-  </ThingDef>
-  
-  <ThingDef ParentName="LeatherBase">
     <defName>Leather_NightFrog</defName>
     <label>Night Frog Leather</label>
 	<description>Honestly, this one had it coming.</description>
