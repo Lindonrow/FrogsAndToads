@@ -2,66 +2,83 @@
 <Defs>
 
   <ThingDef ParentName="AnimalThingBase">
-    <defName>PoisonDartFrog</defName>
-    <label>poison dart frog</label>
-    <description>Probably shouldn't touch this.</description>
+    <defName>PumpkinToadlet</defName>
+    <label>pumpkin toadlet</label>
+    <description>This small orange frog with big anime eyes is notable for being the only frog capable of doing a gainer. Unfortunately, the reason it is able to do this is because it is actually terrible at jumping and completely loses control when it tries, causing it to spin through the air wildly. This is simultaneously badass and also painful for the frog. Also, these frogs are closely related to the Poison Dart Frog. While considerably less poisonous than their kin, they can still cause problems.</description>
     <statBases>
-      <MoveSpeed>4.0</MoveSpeed>
-      <MarketValue>200</MarketValue>
+      <MoveSpeed>3</MoveSpeed>
+      <MarketValue>100</MarketValue>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
-      <ComfyTemperatureMax>20</ComfyTemperatureMax>
-      <Wildness>0.6</Wildness>
-      <ToxicResistance>0.5</ToxicResistance>
+      <Wildness>0.2</Wildness>
+      <ToxicResistance>0.2</ToxicResistance>
+	  <MeatAmount>18</MeatAmount>
+	  <LeatherAmount>10</LeatherAmount>
     </statBases>
+	<comps>
+		<li Class="VEF.AnimalBehaviours.CompProperties_ThoughtEffecter">
+			<radius>10</radius>
+			<tickInterval>2500</tickInterval>
+			<thoughtDef>GainerThought</thoughtDef>
+		</li>
+		<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff">
+			<hediffname>GainerFrog</hediffname>
+		</li>
+    </comps>
     <uiIconScale>1.25</uiIconScale>
     <tools>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>1.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
       <li>
         <capacities>
           <li>ToxicBite</li>
         </capacities>
         <power>3</power>
-        <cooldownTime>1</cooldownTime>
+        <cooldownTime>2.6</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.4</chanceFactor>
       </li>
       <li>
         <label>head</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>2</power>
+        <power>1</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.15</chanceFactor>
+        <chanceFactor>0.2</chanceFactor>
       </li>
     </tools>
     <race>
 	  <wildBiomes>
-			<BorealForest>0.01</BorealForest>
-			<IceSheet>0.01</IceSheet>
-			<Tundra>0.01</Tundra>
-			<ColdBog>0.05</ColdBog>
-			<SeaIce>0.01</SeaIce>
-			<TemperateSwamp>0.1</TemperateSwamp>
-			<TropicalSwamp>0.15</TropicalSwamp>
-			<TemperateForest>0.04</TemperateForest>
-			<TropicalRainforest>0.15</TropicalRainforest>
-	  </wildBiomes>
+			<TemperateSwamp>0.07</TemperateSwamp>
+			<TropicalSwamp>0.1</TropicalSwamp>
+			<TemperateForest>0.05</TemperateForest>
+			<TropicalRainforest>0.2</TropicalRainforest>
+	  </wildBiomes>	
       <body>QuadrupedAnimalWithPaws</body>
       <nameGenerator>FrogNamerMale</nameGenerator>
       <nameGeneratorFemale>FrogNamerFemale</nameGeneratorFemale>
       <baseBodySize>0.12</baseBodySize>
-      <baseHealthScale>0.2</baseHealthScale>
-      <baseHungerRate>0.1</baseHungerRate>
+      <baseHealthScale>0.15</baseHealthScale>
+      <baseHungerRate>0.09</baseHungerRate>
       <foodType>OmnivoreRoughAnimal</foodType>
       <leatherDef>Leather_Frog</leatherDef>
       <trainability>Intermediate</trainability>
-      <petness>0.1</petness>
+      <useMeatFrom>Toad</useMeatFrom>
+      <petness>0.6</petness>
       <waterSeeker>true</waterSeeker>
       <waterCellCost>1</waterCellCost>	 
       <gestationPeriodDays>5</gestationPeriodDays>
       <soundEating>Reptile_Eat</soundEating>
-      <lifeExpectancy>8</lifeExpectancy>
+      <lifeExpectancy>7</lifeExpectancy>
       <lifeStageAges>
         <li>
           <def>AnimalBaby</def>
@@ -90,44 +107,44 @@
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>PoisonDartFrog</defName>
-    <label>poison dart frog</label>
-    <race>PoisonDartFrog</race>
-    <combatPower>30</combatPower>
-    <ecoSystemWeight>0.1</ecoSystemWeight>
+    <defName>PumpkinToadlet</defName>
+    <label>pumpkin toadlet</label>
+    <race>PumpkinToadlet</race>
+    <combatPower>18</combatPower>
+    <ecoSystemWeight>0.15</ecoSystemWeight>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Frog_Types/PoisonDart_Frog/PoisonFrog</texPath>
-          <drawSize>0.5</drawSize>
+          <texPath>Things/Pawn/Animal/Frog_Types/Pumpkin_Toadlet/PumpkinToadlet</texPath>
+          <drawSize>0.3</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Bullfrog/Dessicated_Bullfrog</texPath>
-          <drawSize>0.5</drawSize>
+          <drawSize>0.3</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Frog_Types/PoisonDart_Frog/PoisonFrog</texPath>
-          <drawSize>0.7</drawSize>
+          <texPath>Things/Pawn/Animal/Frog_Types/Pumpkin_Toadlet/PumpkinToadlet</texPath>
+          <drawSize>0.4</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Bullfrog/Dessicated_Bullfrog</texPath>
-          <drawSize>0.7</drawSize>
+          <drawSize>0.4</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Frog_Types/PoisonDart_Frog/PoisonFrog</texPath>
-          <drawSize>0.9</drawSize>
+          <texPath>Things/Pawn/Animal/Frog_Types/Pumpkin_Toadlet/PumpkinToadlet</texPath>
+          <drawSize>0.55</drawSize>
           <shadowData>
-            <volume>(0.25, 0.3, 0.25)</volume>
+            <volume>(0.125, 0.125, 0.125)</volume>
             <offset>(0,0,0)</offset>
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Bullfrog/Dessicated_Bullfrog</texPath>
-          <drawSize>0.9</drawSize>
+          <drawSize>0.55</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>
