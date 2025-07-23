@@ -8,7 +8,7 @@
     <statBases>
       <MoveSpeed>4.0</MoveSpeed>
       <MarketValue>100</MarketValue>
-      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
       <Wildness>0.3</Wildness>
       <ToxicResistance>0</ToxicResistance>
     </statBases>
