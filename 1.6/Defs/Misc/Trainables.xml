@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TrainableDef>
+    <defName>AmphibianWarCry</defName>
+    <label>amphibian war cry</label>
+    <description>Command the frog to release a powerful roar. This has a chance to cause hostile humans and animals to tremble in fear, reducing their movement speed and manipulation.</description>
+    <listPriority>0</listPriority>
+    <difficulty>200</difficulty>
+    <steps>2</steps>
+    <specialTrainable>true</specialTrainable>
+    <enablesAbility>FrogRoar</enablesAbility>
+  </TrainableDef>
+
+</Defs>

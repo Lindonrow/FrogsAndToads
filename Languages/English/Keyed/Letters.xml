@@ -3,4 +3,8 @@
   <legGrowth>Leg Growth</legGrowth>
   <tomatoGrowth>Tomato Growth</tomatoGrowth>
   <woodGrowth>Wood Growth</woodGrowth>  
+
+  <ST_WoodFrog_CommandLabel>Command Metamorphosis</ST_WoodFrog_CommandLabel>
+  <ST_WoodFrog_CommandDesc>Command the wood frog to undergo metamorphosis to finally reach its final form- a tree.</ST_WoodFrog_CommandDesc>
+
 </LanguageData>
